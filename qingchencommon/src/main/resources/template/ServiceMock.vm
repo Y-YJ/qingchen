@@ -1,0 +1,29 @@
+package ${package_name}.rpc.api;
+
+import com.qingchen.common.base.BaseServiceMock;
+import ${package_name}.dao.mapper.${model}Mapper;
+import ${package_name}.dao.model.${model};
+import ${package_name}.dao.model.${model}Example;
+/**
+* \
+* \                                                 )
+* \                                               (  (
+* \                                              ) ) )
+* \                  ......,.....................)  )
+* \                 |.....|..................... ))
+* \                                 [[[_________________________________]]]
+* \                                         Blog: www.qingchen.red
+* \                                          Created by PhpStorm.
+* \                                            Date: ${ctime}
+* \                                              User: 清晨
+* \
+*/
+
+
+
+/**
+* 降级实现${model}Service接口
+*/
+public class ${model}ServiceMock extends BaseServiceMock<${model}Mapper, ${model}, ${model}Example> implements ${model}Service {
+
+}

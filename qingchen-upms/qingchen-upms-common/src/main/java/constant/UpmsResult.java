@@ -1,6 +1,6 @@
-package com.qingchen.common.annotation;
+package constant;
 
-import java.lang.annotation.*;
+import com.qingchen.common.base.BaseResult;
 
 /**
  * \
@@ -12,17 +12,12 @@ import java.lang.annotation.*;
  * \                                 [[[_________________________________]]]
  * \                                         Blog: www.qingchen.red
  * \                                          Created by PhpStorm.
- * \                                            Date: 2017/6/29 0029
+ * \                                            Date: 2017/7/3 0003
  * \                                              User: 清晨
  * \
  */
-
-
-/**
- * 初始化继承BaseService的service
- */
-@Target({ElementType.TYPE})
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-public @interface BaseService {
+public class UpmsResult extends BaseResult {
+    public UpmsResult(UpmsResultConstant upmsResultConstant, Object data) {
+        super(upmsResultConstant.getCode(), upmsResultConstant.getMessage(), data);
+    }
 }

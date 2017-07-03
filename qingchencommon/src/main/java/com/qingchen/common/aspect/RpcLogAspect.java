@@ -23,6 +23,10 @@ import org.slf4j.LoggerFactory;
  * \                                              User: 清晨
  * \
  */
+
+/**
+ * rpc提供者和消费者日志打印
+ */
 public class RpcLogAspect {
     private static Logger _log = LoggerFactory.getLogger(RpcLogAspect.class);
 
