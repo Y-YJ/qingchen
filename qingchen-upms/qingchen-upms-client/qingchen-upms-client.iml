@@ -16,6 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="qingchen-upms-rpc-api" />
     <orderEntry type="module" module-name="qingchen-common" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.7.RELEASE" level="project" />
@@ -141,7 +142,7 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.8" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
-    <orderEntry type="library" name="Maven: red.qingchen:qingchen-upms-rpc-api:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: red.qingchen:qingchen-upms-rpc-api:1.0.0" level="project" />
     <orderEntry type="module" module-name="qingchen-upms-dao" />
     <orderEntry type="module" module-name="qingchen-upms-common" />
   </component>

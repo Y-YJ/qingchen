@@ -15,7 +15,7 @@
           http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 引入jdbc配置文件 -->
-    <context:property-placeholder location="classpath:jdbc.properties" />
+    <!--<context:property-placeholder location="classpath:jdbc.properties" />-->
     <!-- 配置进行解密  -->
     <bean id="propertyConfigurer" class="com.qingchen.common.plugin.EncryptPropertyPlaceholderConfigurer">
         <property name="locations">
@@ -84,11 +84,11 @@
         <property name="targetDataSources">
             <map key-type="java.lang.String">
                 <!-- 可配置多个数据源 -->
-                <entry value-ref="masterDataSource" key="masterDataSource"/>
-                <entry value-ref="slaveDataSource" key="slaveDataSource"/>
+                <entry value-ref="masterDataSource" key="masterDataSource"></entry>
+                <entry value-ref="slaveDataSource" key="slaveDataSource"></entry>
             </map>
         </property>
-        <property name="defaultTargetDataSource" ref="masterDataSource"/>
+        <property name="defaultTargetDataSource" ref="masterDataSource"></property>
     </bean>
 
     <!-- 为Mybatis创建SqlSessionFactory，同时指定数据源 -->
@@ -97,7 +97,7 @@
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <property name="mapperLocations" value="classpath*:com/qingchen/upms/dao/mapper/*Mapper.xml"/>
     </bean>
-    <!-- Mapper接口所在包名，Spring会自动查找其下的Mapper -->
+    <!-- Mapper接口所在包名，Spring会自动查找其下的Mapper-->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="**.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>

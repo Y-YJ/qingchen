@@ -3,6 +3,7 @@ package com.qingchen.upms.client.shiro.session;
 
 import com.qingchen.common.util.RedisUtil;
 import com.qingchen.upms.client.util.SerializableUtil;
+import constant.UpmsConstant;
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.ValidatingSession;

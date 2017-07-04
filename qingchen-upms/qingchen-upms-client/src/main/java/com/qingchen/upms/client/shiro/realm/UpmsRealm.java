@@ -3,6 +3,8 @@ package com.qingchen.upms.client.shiro.realm;
 
 import com.qingchen.common.util.MD5Util;
 import com.qingchen.common.util.PropertiesFileUtil;
+import com.qingchen.upms.dao.model.*;
+import com.qingchen.upms.rpc.api.UpmsApiService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;

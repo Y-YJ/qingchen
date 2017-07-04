@@ -1,9 +1,9 @@
 package com.qingchen.upms.server.controller;
 
-import com.zheng.common.base.BaseController;
-import com.zheng.upms.client.shiro.session.UpmsSessionDao;
-import com.zheng.upms.common.constant.UpmsResult;
-import com.zheng.upms.common.constant.UpmsResultConstant;
+import com.qingchen.common.base.BaseController;
+import com.qingchen.upms.client.shiro.session.UpmsSessionDao;
+import constant.UpmsResult;
+import constant.UpmsResultConstant;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

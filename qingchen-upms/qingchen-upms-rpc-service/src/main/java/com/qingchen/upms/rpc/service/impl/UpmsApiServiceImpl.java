@@ -3,8 +3,8 @@ package com.qingchen.upms.rpc.service.impl;
 
 import com.qingchen.upms.dao.mapper.*;
 import com.qingchen.upms.dao.model.*;
-import com.qingchen.upms.rpc.api.UpmsApiService;
-import com.qingchen.upms.rpc.mapper.UpmsApiMapper;
+import com.qingchen.upms.rpc.api.*;
+import com.qingchen.upms.rpc.mapper.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 用户service实现
- * Created by shuzheng on 2016/01/19.
+ * Created by qingchen on 2016/01/19.
  */
 @Service
 @Transactional
@@ -68,7 +68,7 @@ public class UpmsApiServiceImpl implements UpmsApiService {
      * @return
      */
     @Override
-    @Cacheable(value = "zheng-upms-rpc-service-ehcache", key = "'selectUpmsPermissionByUpmsUserId_' + #upmsUserId")
+    @Cacheable(value = "qingchen-upms-rpc-service-ehcache", key = "'selectUpmsPermissionByUpmsUserId_' + #upmsUserId")
     public List<UpmsPermission> selectUpmsPermissionByUpmsUserIdByCache(Integer upmsUserId) {
         return selectUpmsPermissionByUpmsUserId(upmsUserId);
     }
@@ -96,7 +96,7 @@ public class UpmsApiServiceImpl implements UpmsApiService {
      * @return
      */
     @Override
-    @Cacheable(value = "zheng-upms-rpc-service-ehcache", key = "'selectUpmsRoleByUpmsUserId_' + #upmsUserId")
+    @Cacheable(value = "qingchen-upms-rpc-service-ehcache", key = "'selectUpmsRoleByUpmsUserId_' + #upmsUserId")
     public List<UpmsRole> selectUpmsRoleByUpmsUserIdByCache(Integer upmsUserId) {
         return selectUpmsRoleByUpmsUserId(upmsUserId);
     }

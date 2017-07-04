@@ -6,6 +6,6 @@
           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Spring容器初始化完成监听器 -->
-    <bean class="com.qingchen.common.listener.ApplicationContextListener" lazy-init="false"/>
+    <bean class="com.qingchen.common.listener.ApplicationContextListener" lazy-init="false"></bean>
 
 </beans>

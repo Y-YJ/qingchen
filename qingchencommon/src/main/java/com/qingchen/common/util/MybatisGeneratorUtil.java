@@ -16,7 +16,7 @@ import static com.qingchen.common.util.StringUtil.lineToHump;
 
 /**
  * 代码生成类
- * Created by ZhangShuzheng on 2017/1/10.
+ * Created by qingchen on 2017/1/10.
  */
 public class MybatisGeneratorUtil {
 
@@ -61,7 +61,7 @@ public class MybatisGeneratorUtil {
 		String sql = "SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = '" + database + "' AND table_name LIKE '" + table_prefix + "_%';";
 
 		System.out.println("========== 开始生成generatorConfig.xml文件 ==========");
-		List<Map<String, Object>> tables = new ArrayList<>();
+		List<Map<String, Object>> tables = new ArrayList<Map<String,Object>>();
 		try {
 			VelocityContext context = new VelocityContext();
 			Map<String, Object> table;
@@ -71,7 +71,7 @@ public class MybatisGeneratorUtil {
 			List<Map> result = jdbcUtil.selectByParams(sql, null);
 			for (Map map : result) {
 				System.out.println(map.get("TABLE_NAME"));
-				table = new HashMap<>();
+				table = new HashMap<String, Object>();
 				table.put("table_name", map.get("TABLE_NAME"));
 				table.put("model_name", lineToHump(ObjectUtils.toString(map.get("TABLE_NAME"))));
 				tables.add(table);
@@ -98,7 +98,7 @@ public class MybatisGeneratorUtil {
 		System.out.println("========== 结束生成generatorConfig.xml文件 ==========");
 
 		System.out.println("========== 开始运行MybatisGenerator ==========");
-		List<String> warnings = new ArrayList<>();
+		List<String> warnings = new ArrayList<String>();
 		File configFile = new File(module_path);
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);

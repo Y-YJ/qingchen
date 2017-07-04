@@ -12,7 +12,15 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/springMVC-servlet.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-threadpool.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-qingchenAdmin.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-ehcache.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-dubbo-consumer.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -26,6 +34,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="qingchen-upms-rpc-api" />
+    <orderEntry type="module" module-name="qingchen-upms-rpc-service" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="module" module-name="qingchen-common" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.7.RELEASE" level="project" />
@@ -152,8 +162,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="module" module-name="qingchen-upms-client" />
-    <orderEntry type="library" name="Maven: red.qingchen:qingchen-upms-rpc-api:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="qingchen-upms-dao" />
     <orderEntry type="module" module-name="qingchen-upms-common" />
+    <orderEntry type="library" name="Maven: red.qingchen:qingchen-upms-rpc-api:1.0.0" level="project" />
   </component>
 </module>

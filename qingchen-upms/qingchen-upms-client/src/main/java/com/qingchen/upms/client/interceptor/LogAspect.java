@@ -2,6 +2,8 @@ package com.qingchen.upms.client.interceptor;
 
 
 import com.qingchen.common.util.RequestUtil;
+import com.qingchen.upms.dao.model.UpmsLog;
+import com.qingchen.upms.rpc.api.UpmsApiService;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

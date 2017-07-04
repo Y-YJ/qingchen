@@ -1,6 +1,8 @@
 package com.qingchen.upms.server.interceptor;
 
 import com.qingchen.common.util.PropertiesFileUtil;
+import com.qingchen.upms.dao.model.UpmsUser;
+import com.qingchen.upms.rpc.api.UpmsApiService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
@@ -30,7 +32,8 @@ public class UpmsInterceptor extends HandlerInterceptorAdapter{
     private static Logger _log = LoggerFactory.getLogger(UpmsInterceptor.class);
     private static final String ZHENG_OSS_ALIYUN_OSS_POLICY = PropertiesFileUtil.getInstance("zheng-oss-client").get("zheng.oss.aliyun.oss.policy");
 
-   // UpmsApiService upmsApiService;
+    @Autowired
+    UpmsApiService upmsApiService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -42,8 +45,8 @@ public class UpmsInterceptor extends HandlerInterceptorAdapter{
         // 登录信息
         Subject subject = SecurityUtils.getSubject();
         String username = (String) subject.getPrincipal();
-//        UpmsUser upmsUser = upmsApiService.selectUpmsUserByUsername(username);
-//        request.setAttribute("upmsUser", upmsUser);
+        UpmsUser upmsUser = upmsApiService.selectUpmsUserByUsername(username);
+        request.setAttribute("upmsUser", upmsUser);
         return true;
     }
 
