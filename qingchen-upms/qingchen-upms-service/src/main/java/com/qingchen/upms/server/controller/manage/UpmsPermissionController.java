@@ -1,4 +1,4 @@
-package com.qingchen.upms.server.controller;
+package com.qingchen.upms.server.controller.manage;
 
 import com.baidu.unbiz.fluentvalidator.ComplexResult;
 import com.baidu.unbiz.fluentvalidator.FluentValidator;

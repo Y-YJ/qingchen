@@ -1,4 +1,4 @@
-package com.qingchen.upms.server.controller;
+package com.qingchen.upms.server.controller.manage;
 
 import com.qingchen.common.base.BaseController;
 import com.qingchen.upms.client.shiro.session.UpmsSessionDao;

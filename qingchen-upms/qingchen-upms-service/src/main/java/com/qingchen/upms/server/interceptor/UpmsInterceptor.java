@@ -30,7 +30,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class UpmsInterceptor extends HandlerInterceptorAdapter{
     private static Logger _log = LoggerFactory.getLogger(UpmsInterceptor.class);
-    private static final String ZHENG_OSS_ALIYUN_OSS_POLICY = PropertiesFileUtil.getInstance("zheng-oss-client").get("zheng.oss.aliyun.oss.policy");
+    private static final String ZHENG_OSS_ALIYUN_OSS_POLICY = PropertiesFileUtil.getInstance("qingchen-oss-client").get("qingchen.oss.aliyun.oss.policy");
 
     @Autowired
     UpmsApiService upmsApiService;

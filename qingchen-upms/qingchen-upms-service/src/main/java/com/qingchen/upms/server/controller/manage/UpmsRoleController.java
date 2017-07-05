@@ -1,4 +1,4 @@
-package com.qingchen.upms.server.controller;
+package com.qingchen.upms.server.controller.manage;
 
 import com.alibaba.fastjson.JSONArray;
 import com.baidu.unbiz.fluentvalidator.ComplexResult;

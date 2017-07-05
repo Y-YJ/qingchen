@@ -46,9 +46,9 @@ public class UpmsAuthenticationFilter extends AuthenticationFilter {
     private final static Logger _log = LoggerFactory.getLogger(UpmsAuthenticationFilter.class);
 
     // 局部会话key
-    private final static String ZHENG_UPMS_CLIENT_SESSION_ID = "zheng-upms-client-session-id";
+    private final static String ZHENG_UPMS_CLIENT_SESSION_ID = "qingchen-upms-client-session-id";
     // 单点同一个code所有局部会话key
-    private final static String ZHENG_UPMS_CLIENT_SESSION_IDS = "zheng-upms-client-session-ids";
+    private final static String ZHENG_UPMS_CLIENT_SESSION_IDS = "qingchen-upms-client-session-ids";
 
     @Autowired
     UpmsSessionDao upmsSessionDao;
@@ -58,7 +58,7 @@ public class UpmsAuthenticationFilter extends AuthenticationFilter {
         Subject subject = getSubject(request, response);
         Session session = subject.getSession();
         // 判断请求类型
-        String upmsType = PropertiesFileUtil.getInstance("zheng-upms-client").get("zheng.upms.type");
+        String upmsType = PropertiesFileUtil.getInstance("qingchen-upms-client").get("qingchen.upms.type");
         session.setAttribute(UpmsConstant.UPMS_TYPE, upmsType);
         if ("client".equals(upmsType)) {
             return validateClient(request, response);
@@ -71,14 +71,14 @@ public class UpmsAuthenticationFilter extends AuthenticationFilter {
 
     @Override
     protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws Exception {
-        StringBuffer sso_server_url = new StringBuffer(PropertiesFileUtil.getInstance("zheng-upms-client").get("zheng.upms.sso.server.url"));
+        StringBuffer sso_server_url = new StringBuffer(PropertiesFileUtil.getInstance("qingchen-upms-client").get("qingchen.upms.sso.server.url"));
         // server需要登录
-        String upmsType = PropertiesFileUtil.getInstance("zheng-upms-client").get("zheng.upms.type");
+        String upmsType = PropertiesFileUtil.getInstance("qingchen-upms-client").get("qingchen.upms.type");
         if ("server".equals(upmsType)) {
             WebUtils.toHttp(response).sendRedirect(sso_server_url.append("/sso/login").toString());
             return false;
         }
-        sso_server_url.append("/sso/index").append("?").append("appid").append("=").append(PropertiesFileUtil.getInstance("zheng-upms-client").get("zheng.upms.appID"));
+        sso_server_url.append("/sso/index").append("?").append("appid").append("=").append(PropertiesFileUtil.getInstance("qingchen-upms-client").get("qingchen.upms.appID"));
         // 回跳地址
         HttpServletRequest httpServletRequest = WebUtils.toHttp(request);
         StringBuffer backurl = httpServletRequest.getRequestURL();
@@ -127,7 +127,7 @@ public class UpmsAuthenticationFilter extends AuthenticationFilter {
         if (StringUtils.isNotBlank(code)) {
             // HttpPost去校验code
             try {
-                StringBuffer sso_server_url = new StringBuffer(PropertiesFileUtil.getInstance("zheng-upms-client").get("zheng.upms.sso.server.url"));
+                StringBuffer sso_server_url = new StringBuffer(PropertiesFileUtil.getInstance("qingchen-upms-client").get("qingchen.upms.sso.server.url"));
                 HttpClient httpclient = new DefaultHttpClient();
                 HttpPost httpPost = new HttpPost(sso_server_url.toString() + "/sso/code");
 

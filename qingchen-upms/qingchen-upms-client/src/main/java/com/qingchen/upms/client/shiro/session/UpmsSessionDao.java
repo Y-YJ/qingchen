@@ -23,17 +23,17 @@ public class UpmsSessionDao extends CachingSessionDAO {
 
     private static Logger _log = LoggerFactory.getLogger(UpmsSessionDao.class);
     // 会话key
-    private final static String ZHENG_UPMS_SHIRO_SESSION_ID = "zheng-upms-shiro-session-id";
+    private final static String ZHENG_UPMS_SHIRO_SESSION_ID = "qingchen-upms-shiro-session-id";
     // 全局会话key
-    private final static String ZHENG_UPMS_SERVER_SESSION_ID = "zheng-upms-server-session-id";
+    private final static String ZHENG_UPMS_SERVER_SESSION_ID = "qingchen-upms-server-session-id";
     // 全局会话列表key
-    private final static String ZHENG_UPMS_SERVER_SESSION_IDS = "zheng-upms-server-session-ids";
+    private final static String ZHENG_UPMS_SERVER_SESSION_IDS = "qingchen-upms-server-session-ids";
     // code key
-    private final static String ZHENG_UPMS_SERVER_CODE = "zheng-upms-server-code";
+    private final static String ZHENG_UPMS_SERVER_CODE = "qingchen-upms-server-code";
     // 局部会话key
-    private final static String ZHENG_UPMS_CLIENT_SESSION_ID = "zheng-upms-client-session-id";
+    private final static String ZHENG_UPMS_CLIENT_SESSION_ID = "qingchen-upms-client-session-id";
     // 单点同一个code所有局部会话key
-    private final static String ZHENG_UPMS_CLIENT_SESSION_IDS = "zheng-upms-client-session-ids";
+    private final static String ZHENG_UPMS_CLIENT_SESSION_IDS = "qingchen-upms-client-session-ids";
 
     @Override
     protected Serializable doCreate(Session session) {
