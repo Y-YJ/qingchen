@@ -23,6 +23,7 @@ import com.baidu.unbiz.fluentvalidator.ValidatorHandler;
 /**
  * 校验数字大小
  */
+
 public class SizeValidator extends ValidatorHandler<Integer> implements Validator<Integer> {
 
     private int min;

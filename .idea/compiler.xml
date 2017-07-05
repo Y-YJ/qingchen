@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qingchen-common" />
+        <module name="qingchen-upms-client" />
+        <module name="qingchen-upms-common" />
+        <module name="qingchen-upms-dao" />
+        <module name="qingchen-upms-rpc-api" />
+        <module name="qingchen-upms-rpc-service" />
+        <module name="qingchen-upms-service" />
+        <module name="qingchenupmsrpcservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qingchen" target="1.8" />
+      <module name="qingchen-common" target="1.5" />
+      <module name="qingchen-upms" target="1.8" />
+      <module name="qingchen-upms-client" target="1.8" />
+      <module name="qingchen-upms-common" target="1.8" />
+      <module name="qingchen-upms-dao" target="1.8" />
+      <module name="qingchen-upms-rpc-api" target="1.8" />
+      <module name="qingchen-upms-rpc-service" target="1.8" />
+      <module name="qingchen-upms-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

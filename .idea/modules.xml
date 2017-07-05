@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:\JAVA\qingchen\qingchen-upms\client.iml" filepath="F:\JAVA\qingchen\qingchen-upms\client.iml" />
+      <module fileurl="file://F:\JAVA\qingchen\qingchen-upms\common.iml" filepath="F:\JAVA\qingchen\qingchen-upms\common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen.iml" filepath="$PROJECT_DIR$/qingchen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchencommon/qingchen-common.iml" filepath="$PROJECT_DIR$/qingchencommon/qingchen-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-client/qingchen-upms-client.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-client/qingchen-upms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-common/qingchen-upms-common.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-common/qingchen-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-dao/qingchen-upms-dao.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-dao/qingchen-upms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-rpc-api/qingchen-upms-rpc-api.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-rpc-api/qingchen-upms-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-rpc-service/qingchen-upms-rpc-service.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-rpc-service/qingchen-upms-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qingchen-upms/qingchen-upms-service/qingchen-upms-service.iml" filepath="$PROJECT_DIR$/qingchen-upms/qingchen-upms-service/qingchen-upms-service.iml" />
+      <module fileurl="file://F:\JAVA\qingchen\qingchen-upms\qingchenclient.iml" filepath="F:\JAVA\qingchen\qingchen-upms\qingchenclient.iml" />
+    </modules>
+  </component>
+</project>
